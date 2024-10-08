@@ -1,4 +1,4 @@
-#include "Window.h"
+#include "App.h"
 
 int CALLBACK WinMain(
 	_In_ HINSTANCE hInstance,
@@ -8,25 +8,9 @@ int CALLBACK WinMain(
 {
 	try
 	{
-		Window wnd(1000, 650, "Bryan DirectX11");
-
-		MSG msg;
-		BOOL gResult;
-		while ( (gResult = GetMessage( &msg, nullptr, 0, 0 )) > 0)
-		{
-			TranslateMessage(&msg);
-			DispatchMessage(&msg);
-		}
-
-		if (gResult == -1)
-		{
-			return -1;
-		}
-
-		return static_cast<int>(msg.wParam);
+		return App{}.Go();
 	}
-
-	catch (const ChiliException& e) 
+	catch (const ChiliException& e)
 	{
 		MessageBox(nullptr, e.what(), e.GetType(), MB_OK | MB_ICONEXCLAMATION);
 	}
@@ -36,7 +20,7 @@ int CALLBACK WinMain(
 	}
 	catch (...)
 	{
-		MessageBox(nullptr, "No details avaiable", "Unkown Exception",MB_OK | MB_ICONEXCLAMATION);
+		MessageBox(nullptr, "No details available", "Unknown Exception", MB_OK | MB_ICONEXCLAMATION);
 	}
 	return -1;
 }
