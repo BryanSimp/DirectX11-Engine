@@ -2,7 +2,7 @@
 
 App::App()
 	:
-	wnd(800, 600, "The Donkey Fart Box")
+	wnd(800, 600, "Bryan Simpson DirectX 11")
 {}
 
 int App::Go()
@@ -21,5 +21,9 @@ int App::Go()
 
 void App::DoFrame()
 {
-
+	const float c = sin(timer.Peek()) / 2.0f + 0.5f;
+	const float c2 = cos(timer.Peek()) / 2.0f + 0.5f;
+	const float c3 = tan(timer.Peek()) / 2.0f + 0.5f;
+	wnd.Gfx().ClearBuffer(c, c2, c3);
+	wnd.Gfx().EndFrame();
 }
