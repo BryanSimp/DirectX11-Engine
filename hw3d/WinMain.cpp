@@ -12,15 +12,15 @@ int CALLBACK WinMain(
 	}
 	catch (const ChiliException& e)
 	{
-		MessageBox(nullptr, e.what(), e.GetType(), MB_OK | MB_ICONEXCLAMATION);
+		MessageBox(nullptr, e.what(), e.GetType(), MB_OK | MB_ICONEXCLAMATION | MB_TASKMODAL);
 	}
 	catch (const std::exception& e)
 	{
-		MessageBox(nullptr, e.what(), "Standard Exception", MB_OK | MB_ICONEXCLAMATION);
+		MessageBox(nullptr, e.what(), "Standard Exception", MB_OK | MB_ICONEXCLAMATION | MB_TASKMODAL);
 	}
 	catch (...)
 	{
-		MessageBox(nullptr, "No details available", "Unknown Exception", MB_OK | MB_ICONEXCLAMATION);
+		MessageBox(nullptr, "No details available", "Unknown Exception", MB_OK | MB_ICONEXCLAMATION | MB_TASKMODAL);
 	}
 	return -1;
 }
