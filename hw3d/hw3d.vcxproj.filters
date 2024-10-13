@@ -16,6 +16,24 @@
     <Filter Include="Shader">
       <UniqueIdentifier>{0426b8d5-855f-41d7-b7d5-b101be091658}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Dxerr">
+      <UniqueIdentifier>{843d5e98-3633-4f43-bce7-25fd027c29b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Bindable">
+      <UniqueIdentifier>{e2dce6bd-826a-41d9-8e95-08503165d239}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Drawable">
+      <UniqueIdentifier>{5558c9d5-26ff-4efd-a7be-336acf61c53f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Macros">
+      <UniqueIdentifier>{5b0d4178-5b9d-4c27-b850-14db9d60a44f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Bindable">
+      <UniqueIdentifier>{ccbfdb87-a4f7-4e3c-87d8-61e3ffc7b487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Drawable">
+      <UniqueIdentifier>{e085b43a-8944-45fe-b651-cdc92b397d1f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -45,11 +63,41 @@
     <ClCompile Include="Mouse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dxerr.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DxgiInfoManager.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dxerr.cpp">
+      <Filter>Dxerr</Filter>
+    </ClCompile>
+    <ClCompile Include="Bindable.cpp">
+      <Filter>Source Files\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Box.cpp">
+      <Filter>Source Files\Drawable</Filter>
+    </ClCompile>
+    <ClCompile Include="Drawable.cpp">
+      <Filter>Source Files\Drawable</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexBuffer.cpp">
+      <Filter>Source Files\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="InputLayout.cpp">
+      <Filter>Source Files\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="PixelShader.cpp">
+      <Filter>Source Files\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Topology.cpp">
+      <Filter>Source Files\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="TransformCbuf.cpp">
+      <Filter>Source Files\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>Source Files\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexShader.cpp">
+      <Filter>Source Files\Bindable</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -83,11 +131,53 @@
     <ClInclude Include="Mouse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="dxerr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DxgiInfoManager.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bindable.h">
+      <Filter>Header Files\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="BindableBase.h">
+      <Filter>Header Files\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantBuffers.h">
+      <Filter>Header Files\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexBuffer.h">
+      <Filter>Header Files\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="InputLayout.h">
+      <Filter>Header Files\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="PixelShader.h">
+      <Filter>Header Files\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Topology.h">
+      <Filter>Header Files\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="TransformCbuf.h">
+      <Filter>Header Files\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>Header Files\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexShader.h">
+      <Filter>Header Files\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Box.h">
+      <Filter>Header Files\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="Drawable.h">
+      <Filter>Header Files\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsThrowMacros.h">
+      <Filter>Header Files\Macros</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsThrowMacros.h">
+      <Filter>Header Files\Macros</Filter>
+    </ClInclude>
+    <ClInclude Include="dxerr.h">
+      <Filter>Dxerr</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -102,13 +192,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DXGetErrorDescription.inl">
-      <Filter>Header Files</Filter>
+      <Filter>Dxerr</Filter>
     </None>
     <None Include="DXGetErrorString.inl">
-      <Filter>Header Files</Filter>
+      <Filter>Dxerr</Filter>
     </None>
     <None Include="DXTrace.inl">
-      <Filter>Header Files</Filter>
+      <Filter>Dxerr</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
